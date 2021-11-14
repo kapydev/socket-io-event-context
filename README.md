@@ -39,8 +39,6 @@ io.on("connection", (socket) => {
 
 ```
 
-## Usage
-
 ## Acknowledgements
 
 Essentially a simplified port of [fastify-request-context](https://github.com/fastify/fastify-request-context/blob/master/lib/requestContextPlugin.js), kudos to them
