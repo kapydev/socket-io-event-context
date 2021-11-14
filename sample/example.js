@@ -1,24 +1,21 @@
 const { Server } = require("socket.io");
-
-const { socketContext, socketContextPlugin } = require("../socketContextPlugin")
+const { socketContext, socketContextPlugin } = require("socket-io-event-context")
 
 const io = new Server({ /* options */ });
 
-io.use(socketContextPlugin)
+io.use(socketContextPlugin) // Register the plugin
+
+function getUser() {
+    //Notice how it does not need access to the socket object
+    return socketContext.get("user")
+}
 
 io.on("connection", (socket) => {
 
-    socket.emit("yoyo", "bozo")
-    
-    socket.on("yoyo", (...args) => {
-        socketContext.set("bah", "dah")
-        console.log(getBah())
+    socket.on("your-event", (...args) => {
+        socketContext.set("user", {id: "helloUser"})
+        console.log(getUser())
     })
 });
 
-function getBah() {
-    return socketContext.get("bah")
-}
-
-
-io.listen(3000);
+io.listen(3000)

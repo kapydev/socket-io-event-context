@@ -160,6 +160,15 @@ shimmer@^1.2.0:
   resolved "https://registry.yarnpkg.com/shimmer/-/shimmer-1.2.1.tgz#610859f7de327b587efebf501fb43117f9aff337"
   integrity sha512-sQTKC1Re/rM6XyFM6fIAGHRPVGvyXfgzIDvzoq608vM+jeyVD0Tu1E6Np0Kc2zAIFWIj963V2800iF/9LPieQw==
 
+socket-io-event-context@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/socket-io-event-context/-/socket-io-event-context-1.0.0.tgz#ff79b958e0f17c93d59de8d16afa74c01fa84bf0"
+  integrity sha512-AP6BzgNcC/OW9K/gNz56E2Nrd6we9oolsr5pHOpFHlRAjgE5uakEkSTm3jrBnvxvfJ0shpfrHPA5nFDHdce0Ug==
+  dependencies:
+    async_hooks "^1.0.0"
+    asynchronous-local-storage "^1.0.2"
+    socket.io "^4.3.2"
+
 socket.io-adapter@~2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/socket.io-adapter/-/socket.io-adapter-2.3.2.tgz#039cd7c71a52abad984a6d57da2c0b7ecdd3c289"
